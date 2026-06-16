@@ -9,10 +9,10 @@
 
 /* 入力エリアと結果エリアの見た目調整 */
 .input-area, .result-area {
-  flex: 1; /* 左右を同じ幅にする */
+  flex: 1;
 }
 
-/* レスポンシブ対応（メディアクエリ）*/
+/* レスポンシブ対応 */
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
