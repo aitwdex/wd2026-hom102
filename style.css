@@ -1,0 +1,21 @@
+/*　PC画面向け　*/
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+/* 入力エリアと結果エリアの見た目調整 */
+.input-area, .result-area {
+  flex: 1; /* 左右を同じ幅にする */
+}
+
+/* レスポンシブ対応（メディアクエリ）*/
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
