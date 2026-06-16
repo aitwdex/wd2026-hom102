@@ -4,29 +4,33 @@
   <meta charset="UTF-8">
   <title>お天気チェッカー</title>
   <script type="module" src="main.js" defer></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>選んだ都市の今の天気</h1>
   
-  <div style="margin-bottom: 15px;">
-    <label for="citySelect">都市を選択してください：</label>
-    <select id="citySelect">
-      <option value="35.6895,139.6917">東京</option>
-      <option value="34.6937,135.5023">大阪</option>
-      <option value="35.1814,136.9064">愛知県（名古屋）</option>
-    </select>
+  <div class="container">
+    
+    <div class="input-area">
+      <div style="margin-bottom: 15px;">
+        <label for="citySelect">都市を選択してください：</label>
+        <select id="citySelect">
+          <option value="35.6895,139.6917">東京</option>
+          <option value="34.6937,135.5023">大阪</option>
+          <option value="35.1814,136.9064">愛知県（名古屋）</option>
+        </select>
+      </div>
+      <button id="fetchBtn">天気を取得する</button>
+    </div>
+
+    <div id="resultArea" class="result-area" style="display: none;">
+      <h2><span id="cityName">---</span>の天気</h2>
+      <p>天気: <span id="weatherText">---</span></p>
+      <p>気温: <span id="temperature">--</span> ℃</p>
+    </div>
+
   </div>
-
-  <button id="fetchBtn">天気を取得する</button>
-
-  <div id="resultArea" style="display: none; margin-top: 20px;">
-    <h2><span id="cityName">---</span>の天気</h2>
-    <p>天気: <span id="weatherText">---</span></p>
-    <p>気温: <span id="temperature">--</span> ℃</p>
-  </div>
-
   <footer style="margin-top: 50px;">
     <small>Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>（CC BY 4.0）</small>
   </footer>
